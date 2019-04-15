@@ -25,10 +25,11 @@ end
 
 post '/recipes' do
   # Add the recipe from the form data
-  new_recipe_details = {
+  p new_recipe_details = {
     name: params["name"],
     description: params["description"],
-    prep_time: params["prep_time"]
+    prep_time: params["prep_time"],
+    id: Time.now.strftime('%Y%m%d%H%M%S')
   }
   new_recipe = Recipe.new(new_recipe_details)
   cookbook.add_recipe(new_recipe)

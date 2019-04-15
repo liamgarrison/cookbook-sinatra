@@ -32,7 +32,7 @@ class Cookbook
   def csv_save
     CSV.open(@path_to_csv, "wb") do |csv|
       @recipes.each do |recipe|
-        csv << [recipe.name, recipe.description, recipe.prep_time, recipe.done]
+        csv << [recipe.name, recipe.description, recipe.prep_time, recipe.done, recipe.id]
       end
     end
   end
@@ -45,7 +45,8 @@ class Cookbook
           name: row[0],
           description: row[1],
           prep_time: row[2],
-          done: row[3]
+          done: row[3],
+          id: row[4]
         })
     end
   end

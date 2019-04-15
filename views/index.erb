@@ -2,9 +2,9 @@
 
 <ul class="list-group">
 <% @recipes.each do |recipe| %>
-  <li class="list-group-item">
+  <li class="list-group-item"><a href =<%= "/recipes/#{recipe.id}"%> >
   <%= recipe.name %>
-  </li>
+  </a></li>
 <% end %>
 </ul>
 <a type="button" class="btn btn-primary" href="/new">Create Recipe</a>

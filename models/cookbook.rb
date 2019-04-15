@@ -27,6 +27,10 @@ class Cookbook
     csv_save
   end
 
+  def find_by_id(id)
+    @recipes.select { |recipe| recipe.id == id }[0]
+  end
+
   private
 
   def csv_save

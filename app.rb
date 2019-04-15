@@ -23,6 +23,11 @@ get '/new' do
   erb :new
 end
 
+get '/recipes/:id' do
+  @recipe = cookbook.find_by_id(params[:id])
+  erb :recipe
+end
+
 post '/recipes' do
   # Add the recipe from the form data
   p new_recipe_details = {

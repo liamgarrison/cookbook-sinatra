@@ -40,3 +40,8 @@ post '/recipes' do
   cookbook.add_recipe(new_recipe)
   redirect '/'
 end
+
+get '/recipes/delete/:id' do
+  @recipe = cookbook.remove_recipe(params[:id])
+  redirect '/'
+end

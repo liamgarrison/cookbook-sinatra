@@ -17,8 +17,8 @@ class Cookbook
     csv_save
   end
 
-  def remove_recipe(recipe_index)
-    @recipes.delete_at(recipe_index)
+  def remove_recipe(id)
+    @recipes.reject! { |recipe| recipe.id.to_s == id }
     csv_save
   end
 

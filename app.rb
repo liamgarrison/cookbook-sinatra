@@ -45,3 +45,5 @@ get '/recipes/delete/:id' do
   @recipe = cookbook.remove_recipe(params[:id])
   redirect '/'
 end
+
+set :port, 9494

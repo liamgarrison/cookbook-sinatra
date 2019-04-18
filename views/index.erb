@@ -4,7 +4,7 @@
 <% @recipes.each do |recipe| %>
   <li class="list-group-item justify-content-between">
     <a href =<%= "/recipes/#{recipe.id}"%>><%= recipe.name %></a>
-    <span class="btn btn-danger" href=<%="/recipes/delete/#{recipe.id}"%>>Delete</span>
+    <a class="btn btn-danger" href=<%="/recipes/delete/#{recipe.id}"%>>Delete</a>
   </li>
 <% end %>
 </ul>
